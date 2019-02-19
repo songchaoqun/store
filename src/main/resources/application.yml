@@ -1,0 +1,30 @@
+server:
+  servlet:
+    context-path: /store
+  port: 8080
+
+
+spring:
+  redis:
+    port: 6379
+    host: 127.0.0.1
+  datasource:
+    url: jdbc:mysql://localhost:3306/springboot?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&serverTimezone=UTC
+    driverClassName: com.mysql.jdbc.Driver
+    username: root
+    password: zbq
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  mvc:
+    view:
+      suffix: .jsp
+      prefix: /WEB-INF/jsp
+
+#mybatis 配置xml版本
+#  mybatis.config-locations=classpath:mybatis/config.xml
+#  mybatis.mapper-locations=classpath:mybatis/mapper/*.xml
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  #config-location: classpath:mybatis/config.xml
